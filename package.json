@@ -1,39 +1,29 @@
 {
-  "name": "douglas-maxwell-portfolio",
-  "author": "Douglas Maxwell",
-  "version": "1.0.0",
-  "license": "MIT",
+  "name": "my-portfolio",
+  "version": "0.1.0",
   "private": true,
+  "dependencies": {
+    "@craco/craco": "^5.9.0",
+    "@heroicons/react": "^1.0.1",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-scripts": "^1.1.5"
+  },
   "scripts": {
-    "build": "nuxt build",
-    "dev": "nuxt dev",
-    "generate": "nuxt generate",
-    "preview": "nuxt preview",
-    "postinstall": "nuxt prepare",
-    "start": "node .output/server/index.mjs",
-    "lint": "eslint --ext .js,.ts,.vue --ignore-path .gitignore .",
-    "lint:fix": "eslint --ext .js,.ts,.vue --ignore-path .gitignore . --fix"
+    "start": "craco start",
+    "build": "craco build",
+    "test": "craco test",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
   },
   "devDependencies": {
-    "@headlessui/vue": "^1.7.13",
-    "@heroicons/vue": "^2.0.18",
-    "@nuxt/devtools": "latest",
-    "@nuxt/ui": "latest",
-    "@nuxt/image": "1.0.0-rc.1",
-    "@nuxtjs/eslint-config-typescript": "^12.0.0",
-    "@pinia/nuxt": "^0.4.11",
-    "@vercel/analytics": "^1.0.1",
-    "@vueuse/core": "^9.13.0",
-    "@vueuse/nuxt": "^9.13.0",
-    "nuxt-svgo": "^3.4.0",
-    "eslint": "^8.40.0",
-    "eslint-config-prettier": "^8.8.0",
-    "eslint-plugin-prettier": "^4.2.1",
-    "eslint-plugin-vue": "^9.13.0",
-    "nuxt": "^3.5.2",
-    "nuxt-headlessui": "^1.1.4",
-    "prettier": "^2.8.8",
-    "sass": "^1.63.3",
-    "sitemap": "^7.1.1"
+    "autoprefixer": "^9.8.6",
+    "postcss": "^7.0.36",
+    "tailwindcss": "npm:@tailwindcss/postcss7-compat@^2.0.2"
   }
 }
