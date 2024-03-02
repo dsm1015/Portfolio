@@ -1,2 +1,5 @@
-<h1>Douglas Maxwell</h1>
-<p class="text-green-400">I'm a cool, I really am.</p>
+<script>
+    import Main from '../components/Main.svelte';
+</script>
+
+<Main/>
