@@ -8,7 +8,7 @@
 <a
     href={project.href}
     target="_blank"
-    class="overflow-hidden p-4 sm:p-6 md:p-8 flex flex-col gap-4 rounded-lg border border-solid border-green-700 text-center cursor-pointer group hover:border-green-400 duration-200"
+    class="overflow-hidden sm:p-6 md:p-8 flex flex-col gap-4 rounded-lg border border-solid border-green-700 text-center cursor-pointer group hover:border-green-400 duration-200"
 >
     <div
         class="bg-slate-950 grid place-items-center px-4 text-5xl md:text-6xl -mt-10 sm:-mt-12 md:-mt-14 lg:-mt-16 mx-auto duration-200"
@@ -27,15 +27,13 @@
             <p class="z-4">Go to &rarr;</p>
         </div>
     </div>
-    <div class="bg-white w-full mx-auto">
-        <div class="scrolling-tech-icons">
-            {#each project.technologies as techId (techId)}
-                {#each technologies as tech}
-                    {#if tech.name === techId}
-                        <img src={tech.icon} alt={tech.name} class="w-10 h-10 mx-auto"/>
-                    {/if}
-                {/each}
+    <div class="scrolling-tech-icons">
+        {#each project.technologies as techId (techId)}
+            {#each technologies as tech}
+                {#if tech.name === techId}
+                    <img src={tech.icon} alt={tech.name} class="w-10 h-10 mx-auto"/>
+                {/if}
             {/each}
-        </div>
+        {/each}
     </div>
 </a>
