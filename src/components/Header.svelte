@@ -18,7 +18,7 @@
     </h1>
     <div class="sm:flex items-center gap-4 hidden">
         {#each tabs as tab, index}
-            <a href={tab.link} class="duration-200 hover:text-green-400" target={index === 2 ? "_blank" : ""}>
+            <a href={tab.link} class="duration-200 hover:text-green-400" target={index === 2 ? "_self" : ""}>
                 <p>{tab.name}</p>
             </a>
         {/each}

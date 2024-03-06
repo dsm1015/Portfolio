@@ -70,7 +70,7 @@ const projects = [
 		description: 
             'A project for my ENGL411 Science Fiction class that allows users to chat with characters that we have read about.',
         collaborators: ['@dsm1015'],
-        images: ['favicon/scifichatbot.png'],
+        images: ['videos/scifichatbot.gif'],
         icon: "fa-solid fa-robot",
         href: "/projects/scifichatbot",
 		url: 'https://github.com/dsm1015/SciFiChatbot',

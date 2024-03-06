@@ -4,7 +4,7 @@
 
 <a
     href={step.href}
-    target="_blank"
+    target="_self"
     class="p-4 sm:p-6 md:p-8 flex flex-col gap-4 rounded-lg border border-solid border-green-700 text-center cursor-pointer group hover:border-green-400 duration-200"
 >
     <div
