@@ -39,7 +39,9 @@
         </div>
         <div class="grid grid-cols-1 lg:grid-cols-3 gap-12 lg:gap-10">
             {#each projects as project}
-                <Step step={project} />
+                {#if project.featured}
+                    <Step step={project} />
+                {/if}
             {/each}
         </div>
         <div class="flex flex-col items-center gap-1 text-center">

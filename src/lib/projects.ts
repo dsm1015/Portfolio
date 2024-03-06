@@ -8,7 +8,9 @@ const projects = [
         images: ['images/scrumbs1.png', 'images/scrumbs2.png', 'images/scrumbs3.png'],
         icon: "fa-solid fa-list-check",
         href: "/projects/scrumbs",
-		url: 'https://github.com/dsm1015/scrumbs'
+		url: 'https://github.com/dsm1015/scrumbs',
+        featured: false,
+        time: {year: 2022, semester: "Fall"}
 	},
 	{
 		name: 'Offerly',
@@ -19,7 +21,9 @@ const projects = [
         images: ['images/offerly1.png', 'images/offerly2.png', 'images/offerly3.png'],
         icon: "fa-solid fa-cart-shopping",
         href: "/projects/offerly",
-		url: 'https://github.com/dsm1015/Offerly'
+		url: 'https://github.com/dsm1015/Offerly',
+        featured: true,
+        time: {year: 2023, semester: "Fall"}
 	},
     {
 		name: 'TrafficSim',
@@ -30,7 +34,9 @@ const projects = [
         images: ['images/trafficsim1.png', 'images/trafficsim2.png', 'images/trafficsim3.png'],
         icon: "fa-solid fa-diagram-project",
         href: "/projects/trafficsim",
-		url: 'https://github.com/dsm1015/TrafficSim'
+		url: 'https://github.com/dsm1015/TrafficSim',
+        featured: true,
+        time: {year: 2023, semester: "Spring"}
 	},
     {
 		name: 'SRU North Hall 3D Model',
@@ -39,13 +45,74 @@ const projects = [
             'An very detailed rendering of my dorm hall at SRU. I just wanted to learn blender one day.',
         collaborators: ['@dsm1015'],
         images: ['images/northhall1.png', 'images/northhall2.png', 'images/northhall3.png'],
-        icon: "fa-solid fa-diagram-project",
+        icon: "fa-solid fa-cube",
         href: "/projects/trafficsim",
-		url: 'https://github.com/dsm1015/TrafficSim'
+		url: '',
+        featured: true,
+        time: {year: 2023, semester: "Spring"}
+	},
+    {
+		name: 'Portfolio',
+		technologies: ['TypeScript', 'SvelteKit', 'TailwindCSS', 'HTML5', 'NodeJs'],
+		description: 
+            'My personal portfolio website for showcasing my projects and skills. Specifically, I wanted to learn <span class="text-green-400">SvelteKit</span> and <span class="text-green-400">TailwindCSS</span>.',
+        collaborators: ['@dsm1015'],
+        images: ['favicon/android-chrome-512x512.png'],
+        icon: "fa-solid fa-breifcase",
+        href: "/projects/portfolio",
+		url: 'https://github.com/dsm1015/portfolio',
+        featured: false,
+        time: {year: 2024, semester: "Spring"}
+	},
+    {
+		name: 'Sci-Fi Chatbot',
+		technologies: ['OpenAI', 'Python', 'Flask', 'JavaScript', 'HTML5'],
+		description: 
+            'A project for my ENGL411 Science Fiction class that allows users to chat with characters that we have read about.',
+        collaborators: ['@dsm1015'],
+        images: ['favicon/scifichatbot.png'],
+        icon: "fa-solid fa-robot",
+        href: "/projects/scifichatbot",
+		url: 'https://github.com/dsm1015/SciFiChatbot',
+        featured: false,
+        time: {year: 2023, semester: "Spring"}
+	},
+    {
+		name: 'Packet Sniffer',
+		technologies: ['Python'],
+		description: 
+            'A python project for analyzing network traffic packets in Linux environments',
+        collaborators: ['@dsm1015'],
+        images: ['favicon/packetsniffer.png'],
+        icon: "fa-solid fa-wifi",
+        href: "/projects/packetsniffer",
+		url: 'https://github.com/lukemcelligott/packet_sniffer',
+        featured: false,
+        time: {year: 2022, semester: "Spring"}
 	},
 ];
 
 const technologies = [
+    {
+        name: "Flask",
+        icon: "/images/tech-icons/flask.png"     
+    },
+    {
+        name: "OpenAI",
+        icon: "/images/tech-icons/openai.png"     
+    },
+    {
+        name: "Python",
+        icon: "/images/tech-icons/python.png"     
+    },
+    {
+        name: "TailwindCSS",
+        icon: "/images/tech-icons/tailwindcss.png"     
+    },
+    {
+        name: "SvelteKit",
+        icon: "/images/tech-icons/sveltekit.png"     
+    },
     {
         name: "Blender",
         icon: "/images/tech-icons/blender.png"     
