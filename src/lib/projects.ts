@@ -12,7 +12,7 @@ const projects = [
 	},
 	{
 		name: 'Offerly',
-		technologies: ['Springboot', 'Maven', 'Java', 'Bootstrap', 'MySQL', 'HTML5', 'Docker'],
+		technologies: ['Springboot', 'Maven', 'Java', 'Bootstrap', 'MySQL', 'HTML5', 'JavaScript', 'Docker'],
 		description:
 			'Offerly was developed to be an online auction platform. Offerly provides users with a central platform for buying products secondhand',
         collaborators: ['@dsm1015', '@lukemcelligott', '@tth1003'],
@@ -32,9 +32,24 @@ const projects = [
         href: "/projects/trafficsim",
 		url: 'https://github.com/dsm1015/TrafficSim'
 	},
+    {
+		name: 'SRU North Hall 3D Model',
+		technologies: ['Blender'],
+		description: 
+            'An very detailed rendering of my dorm hall at SRU. I just wanted to learn blender one day.',
+        collaborators: ['@dsm1015'],
+        images: ['images/northhall1.png', 'images/northhall2.png', 'images/northhall3.png'],
+        icon: "fa-solid fa-diagram-project",
+        href: "/projects/trafficsim",
+		url: 'https://github.com/dsm1015/TrafficSim'
+	},
 ];
 
 const technologies = [
+    {
+        name: "Blender",
+        icon: "/images/tech-icons/blender.png"     
+    },
     {
         name: "Docker",
         icon: "/images/tech-icons/docker.png"
@@ -54,6 +69,10 @@ const technologies = [
     {
         name: "TypeScript",
         icon: "/images/tech-icons/typescript.png"
+    },
+    {
+        name: "JavaScript",
+        icon: "/images/tech-icons/javascript.png"
     },
     {
         name: "NodeJs",

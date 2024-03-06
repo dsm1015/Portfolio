@@ -44,18 +44,12 @@ h1, h2, h3, .cabin {
 
 .scrolling-tech-icons {
     display: flex;
-    justify-content: space-around;
-    overflow: hidden; 
-    width: 100%;
-    height: 50px; 
-    white-space: nowrap;
-    position: relative; 
-    animation: scroll 10s linear infinite;
+    animation: scroll 15s linear infinite;
 }
 
 @keyframes scroll {
     from {
-        transform: translateX(100%);
+        transform: translateX(0);
     }
     to {
         transform: translateX(-100%);
