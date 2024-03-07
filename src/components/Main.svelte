@@ -3,6 +3,16 @@
 
     import projects from "$lib/projects";
 
+    let rotation = 0;
+    let spin = () => {
+        let img = document.querySelector("img");
+        if (img) {
+            rotation += 360;
+            img.style.transition = "transform 1s ease-in-out";
+            img.style.transform = `rotate(${rotation}deg)`;
+        }
+    };
+
 </script>
 
 <main class="flex flex-col flex-1 p-4">
@@ -27,7 +37,11 @@
         </div>
 
         <div class="relative shadow-2xl grid place-items-center">
-            <img src={"images/profile.png"} alt="Pofile" class="object-cover z-[2] max-h-[40vh]"/>
+            <button on:click={spin}>
+                <img src={"images/profile.png"} alt="Pofile" 
+                    class="greenShadow border-2 border-solid rounded-xl object-cover z-[2] max-h-[40vh]"
+                />
+            </button>
         </div>
     </section>
 
