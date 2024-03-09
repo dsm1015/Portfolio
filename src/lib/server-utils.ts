@@ -1,13 +1,9 @@
-import fs from 'fs';
-import path from 'path';
-
 // Async function to load HTML content from a file
-export async function loadHtmlContent(filename) {
-    const filePath = path.resolve('src/lib/project-content', filename);
-    return new Promise((resolve, reject) => {
-        fs.readFile(filePath, 'utf8', (err, data) => {
-            if (err) reject(err);
-            else resolve(data);
-        });
-    });
+export async function loadHtmlContent(fetch, filename) {
+    const url = `/html/${filename}`;
+    const response = await fetch(url);
+    if (!response.ok) {
+        throw new Error(`Failed to load ${url}: ${response.statusText}`);
+    }
+    return response.text();
 }

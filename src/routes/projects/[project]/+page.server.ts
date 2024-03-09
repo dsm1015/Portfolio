@@ -2,16 +2,15 @@ import {projects} from '$lib/projects';
 import {error} from '@sveltejs/kit';
 import { loadHtmlContent } from '$lib/server-utils';
 
-export async function load({params}) {
-	const project = projects.find((project) => project.slug === params.project);
+export async function load({ params, fetch }) { 
+    const project = projects.find((project) => project.slug === params.project);
 
-	if (!project) throw error(404, 'Project not found');
+    if (!project) throw error(404, 'Project not found');
 
-	// Load HTML content from file
-	const htmlContent = await loadHtmlContent(project.slug + '.html');
-	project.content = htmlContent;
+    const htmlContent = await loadHtmlContent(fetch, `${project.slug}.html`);
+    project.content = htmlContent;
 
-	return {
-		project
-	};
+    return {
+        project
+    };
 }

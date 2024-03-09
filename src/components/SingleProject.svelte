@@ -1,5 +1,15 @@
 <script>
-import { technologies } from "$lib/projects"; export let project;
+import { technologies } from "$lib/projects"; 
+import ModelViewer from "./ModelViewer.svelte";
+import { Canvas } from '@threlte/core'
+import { writable } from 'svelte/store';
+export let project;
+
+const isLoading = writable(true);
+
+function handleLoading(event) {
+    isLoading.set(event.detail);
+}
 </script>
 
 <main class="flex flex-col flex-1 p-4">
@@ -14,16 +24,19 @@ import { technologies } from "$lib/projects"; export let project;
             </div>
 
             <h4 class="font-semibold pt-2 text-md sm:text-xl md:text-2xl">
-                {project.time.semester} {project.time.year} &#8226;
-
-                <i class="fa-brands fa-github"></i>
-                <a href="{project.url}" target="_blank" class="text-green-400">GitHub<sup class=""
-                    ><span class="text-xs scale-75 pl-0.5"
-                        ><i
-                            class="fa-solid fa-arrow-up-right-from-square text-xs scale-[75%]"
-                        /></span
-                    ></sup
-                ></a>
+                {project.time.semester} {project.time.year}
+                
+                {#if project.url}
+                    &#8226;
+                    <i class="fa-brands fa-github"></i>
+                        <a href="{project.url}" target="_blank" class="text-green-400">GitHub<sup class=""
+                            ><span class="text-xs scale-75 pl-0.5"
+                                ><i
+                                    class="fa-solid fa-arrow-up-right-from-square text-xs scale-[75%]"
+                                /></span
+                            ></sup
+                        ></a>
+                {/if}
             </h4>
             {#if project.collaborators.length > 1}
                 <div class="flex gap-2 flex-col text-center">
@@ -46,6 +59,18 @@ import { technologies } from "$lib/projects"; export let project;
     </section>
 
     <section id="ProjectContent" class="py-2 lg:py-4 flex flex-col gap-2 ml-6 mr-6">
+        
+        {#if project.model}
+            <div class="relative w-1280 h-720">
+                {#if $isLoading}
+                    <div class="lds-dual-ring"></div>
+                {/if}
+                <Canvas size={{width: 1280, height: 720}}>    
+                    <ModelViewer {isLoading} on:loading={handleLoading} />
+                </Canvas>
+            </div>
+        {/if}
+
         <div class="flex flex-col gap-2 text-center">
             {@html project.content}
         </div>

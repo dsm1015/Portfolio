@@ -11,6 +11,7 @@ export type Project = {
     url: string;
     featured: boolean;
     time: {year: number, semester: string};
+    model: boolean;
 };
 
 
@@ -28,7 +29,8 @@ const projects: Project[] = [
         href: "/projects/scrumbs",
 		url: 'https://github.com/dsm1015/scrumbs',
         featured: false,
-        time: {year: 2022, semester: "Fall"}
+        time: {year: 2022, semester: "Fall"},
+        model: false
 	},
 	{
 		name: 'Offerly',
@@ -43,7 +45,8 @@ const projects: Project[] = [
         href: "/projects/offerly",
 		url: 'https://github.com/dsm1015/Offerly',
         featured: true,
-        time: {year: 2023, semester: "Fall"}
+        time: {year: 2023, semester: "Fall"},
+        model: false
 	},
     {
 		name: 'TrafficSim',
@@ -58,7 +61,8 @@ const projects: Project[] = [
         href: "/projects/trafficsim",
 		url: 'https://github.com/dsm1015/TrafficSim',
         featured: true,
-        time: {year: 2023, semester: "Spring"}
+        time: {year: 2023, semester: "Spring"},
+        model: false
 	},
     {
 		name: 'SRU North Hall 3D Model',
@@ -68,12 +72,13 @@ const projects: Project[] = [
             'An very detailed rendering of my dorm hall at SRU. I just wanted to learn blender one day.',
         content: '',
         collaborators: ['dsm1015'],
-        images: ['images/northhall1.png', 'images/northhall2.png', 'images/northhall3.png'],
+        images: ['images/northhall-render-front.png'],
         icon: "fa-solid fa-cube",
         href: "/projects/northhall",
 		url: '',
         featured: true,
-        time: {year: 2023, semester: "Spring"}
+        time: {year: 2023, semester: "Spring"},
+        model: true
 	},
     {
 		name: 'Portfolio',
@@ -88,7 +93,8 @@ const projects: Project[] = [
         href: "/projects/portfolio",
 		url: 'https://github.com/dsm1015/portfolio',
         featured: false,
-        time: {year: 2024, semester: "Spring"}
+        time: {year: 2024, semester: "Spring"},
+        model: false
 	},
     {
 		name: 'Sci-Fi Chatbot',
@@ -103,7 +109,8 @@ const projects: Project[] = [
         href: "/projects/scifichatbot",
 		url: 'https://github.com/dsm1015/SciFiChatbot',
         featured: false,
-        time: {year: 2023, semester: "Spring"}
+        time: {year: 2023, semester: "Spring"},
+        model: false
 	},
     {
 		name: 'Packet Sniffer',
@@ -113,12 +120,13 @@ const projects: Project[] = [
             'A python project for analyzing network traffic packets in Linux environments',
         content: '',
         collaborators: ['dsm1015', 'lukemcelligott'],
-        images: ['favicon/packetsniffer.png'],
+        images: ['images/packetsniffer.png'],
         icon: "fa-solid fa-wifi",
         href: "/projects/packetsniffer",
 		url: 'https://github.com/lukemcelligott/packet_sniffer',
         featured: false,
-        time: {year: 2022, semester: "Spring"}
+        time: {year: 2022, semester: "Spring"},
+        model: false
 	},
 ];
 
