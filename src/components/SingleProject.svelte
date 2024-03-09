@@ -1,27 +1,38 @@
 <script lang="ts">
-import { technologies } from "$lib/projects"; 
-import ModelViewer from "./ModelViewer.svelte";
-import { Canvas } from '@threlte/core'
-import { isModelLoading } from '$lib/stores';
+    import { technologies } from "$lib/projects"; 
+    import ModelViewer from "./ModelViewer.svelte";
+    import { Canvas } from '@threlte/core'
+    import { isModelLoading, modelItemsLoaded, modelItemsTotal } from '$lib/stores';
+    import { onMount } from "svelte";
 
-export let project;
+    export let project;
 
-// if isModelLoading is false, add fade-out class to loading-screen
-isModelLoading.subscribe((value) => {
-    if (!value) {
-        const ls = document.getElementById('loading-screen')
-        if(ls){
-            ls.classList.add('fade-out');
-            ls.addEventListener('transitionend', onTransitionEnd);
+    // if isModelLoading is false, add fade-out class to loading-screen
+    onMount(() => {
+        isModelLoading.subscribe((value) => {
+            if (!value) {
+                const ls = document.getElementById('loading-screen')
+                if(ls){
+                    ls.classList.add('fade-out');
+                    ls.addEventListener('transitionend', onTransitionEnd);
+                }
+            }
+        });
+
+        modelItemsLoaded.subscribe((value) => {
+            const pb = document.getElementById('progress-bar');
+            if(pb){
+                pb.style.width = `${(Number(value) / $modelItemsTotal) * 100}%`;
+                console.log(pb.style.width);
+            }
+        });
+    });
+
+    function onTransitionEnd(event) {
+        if(event.target){
+            event.target.remove();
         }
     }
-});
-
-function onTransitionEnd(event) {
-    if(event.target){
-        event.target.remove();
-    }
-}
 
 </script>
 
@@ -75,8 +86,11 @@ function onTransitionEnd(event) {
         
         {#if project.model}
             <div class="relative w-1280 h-720">
-                <div id="loading-screen">
-                    <div id="loader"></div>
+                <div id="loading-screen" class="flex items-center justify-center h-screen">
+        <!--        <div id="loader"></div> -->
+                    <div class=" bg-gray-200 rounded-full h-2.5 dark:bg-gray-700 w-1/2 ">
+                        <div id="progress-bar" class="bg-green-400 h-2.5 rounded-full" style="width: 0%"></div>
+                    </div>
                 </div>
                 <Canvas size={{width: 1280, height: 720}}>    
                     <ModelViewer />

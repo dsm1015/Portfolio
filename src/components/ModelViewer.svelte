@@ -5,7 +5,7 @@
     import { spring } from 'svelte/motion'
     import { OrbitControls } from '@threlte/extras';
 	import { writable } from 'svelte/store';
-    import { isModelLoading } from '$lib/stores';
+    import { isModelLoading, modelItemsLoaded, modelItemsTotal } from '$lib/stores';
     import * as THREE from 'three';
 
     
@@ -21,7 +21,8 @@
         isModelLoading.set(false);
     };
     manager.onProgress = function ( url, itemsLoaded, itemsTotal ) {
-        console.log( 'Loading file: ' + url + '.\nLoaded ' + itemsLoaded + ' of ' + itemsTotal + ' files.' );
+        modelItemsTotal.set(itemsTotal);
+        modelItemsLoaded.set(itemsLoaded);
     };
     manager.onError = function ( url ) {
         console.log( 'There was an error loading ' + url );
