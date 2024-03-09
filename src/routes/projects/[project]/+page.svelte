@@ -3,7 +3,7 @@
 	import SingleProject from "../../../components/SingleProject.svelte";
 
 	/** @type {import('./$types').PageData} */
-	export let project;
+	export let data;
 
 </script>
 
@@ -16,6 +16,4 @@
     <i class="fas fa-arrow-left"></i> Projects
 </a>
 
-<!-- <SingleProject project={project}></SingleProject> -->
-<h1>{project.post.slug}</h1>
-<div>{@html project.post.content}</div>
+<SingleProject project={data.project}></SingleProject>

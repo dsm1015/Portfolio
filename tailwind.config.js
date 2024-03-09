@@ -2,8 +2,17 @@
 export default {
   content: ['./src/**/*.{html,js,svelte,ts}'],
   theme: {
-    extend: {},
+    extend: {
+      listStyleImage: {
+        checkmark: 'url("/images/checkmark.svg")',
+      },
+      backgroundImage: {
+        'checkmark': "url('/images/checkmark.svg')",
+      },
+      backgroundPosition: {
+        'left-center': 'left center',
+      },
+    },
   },
   plugins: [],
 }
-

@@ -1,7 +1,7 @@
 <script>
     import ProjectCard from "../components/ProjectCard.svelte";
 
-    import projects from "$lib/projects";
+    import {projects} from "$lib/projects";
 </script>
 
 <main class="flex flex-col flex-1 p-4">

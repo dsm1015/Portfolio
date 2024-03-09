@@ -1,7 +1,7 @@
 <script>
     import Step from "./Step.svelte";
 
-    import projects from "$lib/projects";
+    import {projects} from "$lib/projects";
 
     let rotation = 0;
     let spin = () => {

@@ -55,3 +55,23 @@ h1, h2, h3, .cabin {
         transform: translateX(-100%);
     }
 }
+
+.demo-container {
+    perspective: 1000px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.demo-image {
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    transition: transform 0.5s;
+    width: 75%;
+    max-width: 100%;
+}
+
+/* .demo-container:hover .demo-image {
+    transform: rotateY(2deg);
+} */
+

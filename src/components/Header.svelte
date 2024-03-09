@@ -6,7 +6,7 @@
     export let y;
 
     export let tabs = [
-        {name: "Projects", link: "#projects"},
+        {name: "Projects", link: "/projects"},
         {name: "About me", link: "#about"},
     ];
 </script>
