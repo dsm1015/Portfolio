@@ -1,15 +1,28 @@
-<script>
+<script lang="ts">
 import { technologies } from "$lib/projects"; 
 import ModelViewer from "./ModelViewer.svelte";
 import { Canvas } from '@threlte/core'
-import { writable } from 'svelte/store';
+import { isModelLoading } from '$lib/stores';
+
 export let project;
 
-const isLoading = writable(true);
+// if isModelLoading is false, add fade-out class to loading-screen
+isModelLoading.subscribe((value) => {
+    if (!value) {
+        const ls = document.getElementById('loading-screen')
+        if(ls){
+            ls.classList.add('fade-out');
+            ls.addEventListener('transitionend', onTransitionEnd);
+        }
+    }
+});
 
-function handleLoading(event) {
-    isLoading.set(event.detail);
+function onTransitionEnd(event) {
+    if(event.target){
+        event.target.remove();
+    }
 }
+
 </script>
 
 <main class="flex flex-col flex-1 p-4">
@@ -62,11 +75,11 @@ function handleLoading(event) {
         
         {#if project.model}
             <div class="relative w-1280 h-720">
-                {#if $isLoading}
-                    <div class="lds-dual-ring"></div>
-                {/if}
+                <div id="loading-screen">
+                    <div id="loader"></div>
+                </div>
                 <Canvas size={{width: 1280, height: 720}}>    
-                    <ModelViewer {isLoading} on:loading={handleLoading} />
+                    <ModelViewer />
                 </Canvas>
             </div>
         {/if}
