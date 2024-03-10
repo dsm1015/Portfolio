@@ -7,6 +7,7 @@
 
     export let tabs = [
         {name: "Projects", link: "/projects"},
+        {name: "Experience", link: "/experience"},
         {name: "About me", link: "#about"},
     ];
 </script>

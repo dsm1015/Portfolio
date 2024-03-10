@@ -1,5 +1,5 @@
 <script>
-	import { technologies } from "$lib/projects";
+	import { technologies } from "$lib/technologies";
 
     export let project;
 </script>

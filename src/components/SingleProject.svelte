@@ -1,5 +1,5 @@
 <script lang="ts">
-    import { technologies } from "$lib/projects"; 
+    import { technologies } from "$lib/technologies"; 
     import ModelViewer from "./ModelViewer.svelte";
     import { Canvas } from '@threlte/core'
     import { isModelLoading, modelItemsLoaded, modelItemsTotal } from '$lib/stores';
