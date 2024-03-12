@@ -1,5 +1,5 @@
-<script>
-    export let step;
+<script lang='ts'>
+    export let step: any;
 </script>
 
 <a
