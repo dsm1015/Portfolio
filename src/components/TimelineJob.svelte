@@ -4,10 +4,13 @@
 </script>
 
 <!--Timeline Event Card-->
-<div class="flex flex-col gap-2 event">
+<div class="flex flex-col gap-2">
     <h4 class="font-semibold text-xl sm:text-2xl md:text-3xl">
-        {job.title} <span class="font-extralight text-base align-middle">&#8226; {job.range.start.month} {job.range.start.year} - {job.range.end.month} {job.range.end.year}</span>
+        {job.title}
     </h4>
+    <h3 class="font-light text-base align-middle text-green-400">
+        {job.range.start.month} {job.range.start.year} - {job.range.end.month} {job.range.end.year}
+    </h3>
     <p>{job.location}</p>
-    <p>{@html job.description}</p>
+    <p class="mt-6">{@html job.description}</p>
 </div>

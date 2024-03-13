@@ -17,7 +17,7 @@
     </div> -->
     <img src={project.images[0]} alt={project.name} class="w-full h-64 object-cover rounded-lg" />
     <h3 class="font-medium text-xl sm:text-2xl md:text-3xl">
-        {project.name} <span class="font-extralight text-base align-middle">&#8226; {project.time.semester} {project.time.year}</span>
+        {project.name} <span class="font-light text-base align-middle">&#8226; {project.time.semester} {project.time.year}</span>
     </h3>
     <p>{@html project.description}</p>
     <div class="flex-1 flex justify-betweeen gap-4 items-end">

@@ -1,68 +1,68 @@
 <script>
     import {timeline} from "$lib/timeline";
-	import TimelineEvent from "./TimelineEvent.svelte";
+	  import TimelineEvent from "./TimelineEvent.svelte";
     import TimelineJob from "./TimelineJob.svelte";
 </script>
 
 <main class="flex flex-col flex-1 p-4">
-    <section id="Experience" class="py-20 lg:py-32 flex flex-col gap-24">
-        <div class="flex flex-col gap-2 text-center">
-            <div
-                class="flex flex-col gap-2 text-center relative before:absolute before:top-0 before:left-0 before:w-2/3 before:h-1.5 before:bg-green-700 after:absolute after:bottom-0 after:right-0 after:w-2/3 after:h-1.5 after:bg-green-700 py-4"
-            >
-                <h3 class="font-semibold text-3xl sm:text-4xl md:text-5xl">
-                    Experience
-                </h3>
-            </div>
+  <section id="Experience" class="design-section">
+    <div class="timeline">
+      <div class="grid place-items-center px-4 text-5xl md:text-6xl mx-auto duration-200">
+        <i class={timeline[0].icon}></i>
+        <h3 class="font-light text-base align-middle text-green-400">
+          {#if timeline[0].type === "job"}
+            {timeline[0].range.start.month} {timeline[0].range.start.year} - {timeline[0].range.end.month} {timeline[0].range.end.year}
+          {:else if timeline[0].type === "event"}
+            {timeline[0].time.month} {timeline[0].time.year}
+          {/if}
+        </h3>
+      </div>
+      <div class="timeline-middle">
+        <div class="timeline-circle"></div>
+      </div>
 
-            <div class="flex flex-col gap-4 mt-32 border-l-4 border-green-400 rounded-br rounded-tr bg-gradient-to-r from-green-400 to-green-900 relative p-12 list-none text-left">
-                {#each timeline as item}
-                    {#if item.type === "job"}
-                        <TimelineJob job={item}> </TimelineJob>
-                    {:else if item.type === "event"}
-                        <TimelineEvent event={item}> </TimelineEvent>
-                    {/if}
-                {/each}
-            </div>
+      {#each timeline as item, index}
+        <div class="timeline-component timeline-content">
+          {#if item.type === "job"}
+            <TimelineJob job={item} />
+          {:else if item.type === "event"}
+            <TimelineEvent event={item} />
+          {/if}
         </div>
-    </section>
+        {#if index % 2 != 0}
+          <div class="timeline-middle">
+            <div class="timeline-circle"></div>
+          </div>
+          <div class="grid place-items-center px-4 text-5xl md:text-6xl mx-auto duration-200">
+            <i class={timeline[index].icon}></i>
+            <h3 class="font-light text-base align-middle text-green-400">
+              {#if timeline[0].type === "job"}
+                {timeline[0].range.start.month} {timeline[0].range.start.year} - {timeline[0].range.end.month} {timeline[0].range.end.year}
+              {:else if timeline[0].type === "event"}
+                {timeline[0].time.month} {timeline[0].time.year}
+              {/if}
+            </h3>
+          </div>
+          <div class="grid place-items-center px-4 text-5xl md:text-6xl mx-auto duration-200">
+            <i class={timeline[index+1].icon}></i>
+            <h3 class="font-light text-base align-middle text-green-400">
+              {#if timeline[0].type === "job"}
+                {timeline[0].range.start.month} {timeline[0].range.start.year} - {timeline[0].range.end.month} {timeline[0].range.end.year}
+              {:else if timeline[0].type === "event"}
+                {timeline[0].time.month} {timeline[0].time.year}
+              {/if}
+            </h3>
+          </div>
+          <div class="timeline-middle">
+            <div class="timeline-circle"></div>
+          </div>
+        {/if}
+      {/each}
+    </div>
+    
+  </section>
 </main>
 
-<section class="design-section">
-    <div class="timeline">
-
-        <div class="timeline-empty">
-        </div>
-
-        <div class="timeline-middle">
-            <div class="timeline-circle"></div>
-        </div>
-        <div class="timeline-component timeline-content">
-        <h3>HTML</h3>
-        <p>Some Text</p>
-        </div>
-        <div class="timeline-component timeline-content">
-                    <h3>CSS</h3>
-                    <p>Some Text.</p>
-        </div>
-        <div class="timeline-middle">
-            <div class="timeline-circle"></div>
-        </div>
-        <div class="timeline-empty">
-        </div>
-
-        <div class="timeline-empty">
-        </div>
-
-        <div class="timeline-middle">
-            <div class="timeline-circle"></div>
-        </div>
-        <div class=" timeline-component timeline-content">
-        <h3>Javascript</h3>
-        <p>Some Text.</p>
-        </div>
-    </div>
-</section>
 
 <style>
 
@@ -71,7 +71,6 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background-color: #1f1f1f;
   min-height: 100vh;
   padding: 100px 0;
 }
@@ -110,6 +109,10 @@
   margin: 0px 20px 20px 20px;
 }
 
+.timeline-icon {
+  
+}
+
 @media screen and (min-width: 768px) {
   .timeline {
     display: grid;
@@ -117,7 +120,7 @@
   }
   .timeline-middle {
     position: relative;
-    background-image: linear-gradient(45deg, #F27121, #E94057, #8A2387);
+    background-image: linear-gradient(45deg, #4ade80, #16a34a, #052e16);
     width: 3px;
     height: 100%;
   }
@@ -131,7 +134,7 @@
     width: 15px;
     height: 15px;
     border-radius: 50%;
-    background-image: linear-gradient(45deg, #F27121, #E94057, #8A2387);
+    background-image: linear-gradient(45deg, #4ade80, #16a34a, #052e16);
     -webkit-transform: translateX(-50%);
             transform: translateX(-50%);
   }

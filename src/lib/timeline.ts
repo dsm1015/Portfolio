@@ -42,7 +42,7 @@ const events: Event[] = [
         title: "Graduated High School",
         description: "I graduated high school as salutatorian during the COVID-19 pandemic.",
         location: "Sandy Lake, PA",
-        icon: "fa-solid fa-graduation-cap",
+        icon: "fa-solid fa-user-graduate",
         image: "/images/lakeview.png",
         time: {year: 2020, month: "June"},
         type: "event"
@@ -55,7 +55,7 @@ const jobs: Job[] = [
         description: "I worked as a teaching assistant for the Python programming course at Slippery Rock University.",
         company: "Slippery Rock University",
         location: "Slippery Rock, PA",
-        icon: "fa-solid fa-code",
+        icon: "fa-brands fa-python",
         image: "/images/tech-icons/python.png",
         range: {start: {year: 2024, month: "January"}, end: {year: 2024, month: "May"}},
         type: "job"
@@ -65,7 +65,7 @@ const jobs: Job[] = [
         description: "I worked as an AI Ops Engineer at <a href='https://www.collinsaerospace.com'>Collins Aerospace</a>.",
         company: "Collins Aerospace",
         location: "Cedar Rapids, IA",
-        icon: "fa-solid fa-chart-line",
+        icon: "fa-solid fa-code-branch",
         image: "/images/collins.png",
         range: {start: {year: 2023, month: "May"}, end: {year: 2023, month: "December"}},
         type: "job"
@@ -94,4 +94,30 @@ const jobs: Job[] = [
 
 //combine jobs and events
 const timeline = [...events, ...jobs];
+//sort jobs and events by data. Use the type to determine the method of sorting
+timeline.sort((a, b) => {
+    if (a.type === "event" && b.type === "event") {
+        if (a.time.year === b.time.year) {
+            return a.time.month.localeCompare(b.time.month);
+        }
+        return a.time.year - b.time.year;
+    } else if (a.type === "job" && b.type === "job") {
+        if (a.range.start.year === b.range.start.year) {
+            return a.range.start.month.localeCompare(b.range.start.month);
+        }
+        return a.range.start.year - b.range.start.year;
+    } else if (a.type === "event" && b.type === "job") {
+        if (a.time.year === b.range.start.year) {
+            return a.time.month.localeCompare(b.range.start.month);
+        }
+        return a.time.year - b.range.start.year;
+    } else if (a.type === "job" && b.type === "event") {
+        if (a.range.start.year === b.time.year) {
+            return a.range.start.month.localeCompare(b.time.month);
+        }
+        return a.range.start.year - b.time.year;
+    }
+    return 0; // Add this line to return a default value
+});
+
 export {timeline};
