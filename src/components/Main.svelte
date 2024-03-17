@@ -1,7 +1,9 @@
 <script>
     import Step from "./Step.svelte";
+    import TechHex from "./TechHex.svelte";
 
     import {projects} from "$lib/projects";
+    import mySkills from "$lib/skills";
 
     let rotation = 0;
     let spin = () => {
@@ -19,13 +21,15 @@
     <section id="introPage" class="grid grid-cols-1 lg:grid-cols-2 gap-10 py-8 sm:py-14">
         <div class="flex flex-col lg:justify-center text-center lg:text-left gap-6 md:gap-8 lg:gap-10">
             <h2 class="font-semibold text-4xl sm:text-5xl md:text-6xl">
-                I'm <span class="cabin text-green-400">Douglas</span> Maxwell
+                I'm <span class=" text-green-400">Douglas</span> Maxwell
             </h2>
             <p class="text-base sm:text-lg md:text-xl">
-                I am a passionate and dedicated DevOps Engineer, Data Scientist and Full Stack Developer with a strong background in computer science and engineering. 
-                I have a proven track record of delivering high-quality software solutions to meet business needs. 
-                I am a quick learner and a team player who is always eager to learn new technologies and methodologies. 
-                I am also a strong advocate for open source software and I am always looking for ways to contribute to the community.
+                I am a tech nerd who loves to learn.
+                Some roles I fill are <span class="text-green-400">DevOps Engineer</span>, <span class=" text-green-400">Data Scientist</span>, and <span class=" text-green-400">Full Stack Developer</span>.
+                I've worked closely with developing and deploying <span class="text-green-400">AI models</span> at scale, as well as maintaining and optimizing cloud infrastructure via <span class=" text-green-400">CI/CD</span> pipelines and Infrastructure as Code (<span class=" text-green-400">IaC</span>).
+            </p>
+            <p class="text-base sm:text-lg md:text-xl">
+                My software development philosophy is rooted in simplicity, scalability, and maintainability.
             </p>
             <button
                 class="greenShadow mx-auto lg:mr-auto lg:ml-0 text-base sm:text-lg md:text-xl poppins relative overflow-hidden px-6 py-3 group rounded-full bg-white text-slate-950">
@@ -45,10 +49,16 @@
         </div>
     </section>
 
+    <section id="skills" class="py-10 lg:py-12 flex flex-col gap-16">
+        <div class="flex justify-center">
+            <TechHex skills={mySkills} />
+        </div>
+    </section>
+
     <section id="projects" class="py-20 lg:py-32 flex flex-col gap-24">
         <div class="flex flex-col gap-2 text-center">
             <h3 class="font-semibold text-3xl sm:text-4xl md:text-5xl">
-                A few of my <span class="cabin text-green-400">creative endeavors</span>.
+                A few of my <span class=" text-green-400">creative endeavors</span>.
             </h3>
         </div>
         <div class="grid grid-cols-1 lg:grid-cols-3 gap-12 lg:gap-10">
@@ -66,7 +76,7 @@
             </a>
         </div>
     </section>
-
+ 
     <section
         id="about"
         class="py-20 pt-10 lg:pt-16 lg:py-32 flex flex-col gap-16 sm:gap-20 md:gap-24 relative"

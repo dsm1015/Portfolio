@@ -9,13 +9,6 @@
     <div class="timeline">
       <div class="grid place-items-center px-4 text-5xl md:text-6xl mx-auto duration-200">
         <i class={timeline[0].icon}></i>
-        <h3 class="font-light text-base align-middle text-green-400">
-          {#if timeline[0].type === "job"}
-            {timeline[0].range.start.month} {timeline[0].range.start.year} - {timeline[0].range.end.month} {timeline[0].range.end.year}
-          {:else if timeline[0].type === "event"}
-            {timeline[0].time.month} {timeline[0].time.year}
-          {/if}
-        </h3>
       </div>
       <div class="timeline-middle">
         <div class="timeline-circle"></div>
@@ -35,23 +28,9 @@
           </div>
           <div class="grid place-items-center px-4 text-5xl md:text-6xl mx-auto duration-200">
             <i class={timeline[index].icon}></i>
-            <h3 class="font-light text-base align-middle text-green-400">
-              {#if timeline[0].type === "job"}
-                {timeline[0].range.start.month} {timeline[0].range.start.year} - {timeline[0].range.end.month} {timeline[0].range.end.year}
-              {:else if timeline[0].type === "event"}
-                {timeline[0].time.month} {timeline[0].time.year}
-              {/if}
-            </h3>
           </div>
           <div class="grid place-items-center px-4 text-5xl md:text-6xl mx-auto duration-200">
             <i class={timeline[index+1].icon}></i>
-            <h3 class="font-light text-base align-middle text-green-400">
-              {#if timeline[0].type === "job"}
-                {timeline[0].range.start.month} {timeline[0].range.start.year} - {timeline[0].range.end.month} {timeline[0].range.end.year}
-              {:else if timeline[0].type === "event"}
-                {timeline[0].time.month} {timeline[0].time.year}
-              {/if}
-            </h3>
           </div>
           <div class="timeline-middle">
             <div class="timeline-circle"></div>

@@ -88,7 +88,7 @@ const projects: Project[] = [
             'My personal portfolio website for showcasing my projects and skills. Specifically, I wanted to learn <span class="text-green-400">SvelteKit</span> and <span class="text-green-400">TailwindCSS</span>.',
         content: '',
         collaborators: ['dsm1015'],
-        images: ['favicon/android-chrome-512x512.png'],
+        images: ['favicon/faviconio-logo/logo.svg'],
         icon: "fa-solid fa-briefcase",
         href: "/projects/portfolio",
 		url: 'https://github.com/dsm1015/portfolio',

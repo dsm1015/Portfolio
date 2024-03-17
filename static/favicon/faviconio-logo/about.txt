@@ -1,4 +1,4 @@
-This favicon was generated using the following font:
+This logo was generated using the following font:
 
 - Font Title: Braah One
 - Font Author: Copyright 2022 The Braah Project Authors (https://github.com/artandtype/Braah )

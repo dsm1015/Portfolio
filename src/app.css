@@ -155,3 +155,17 @@ h1, h2, h3, .cabin {
         transform: rotate(360deg);
     }
 }
+
+.sticky-button {
+    width: 100px; 
+    position: sticky; 
+    top: 100px; 
+    margin-left: 10px; 
+    z-index: 10; 
+}
+
+@media screen and (max-width: 1400px) {
+    .sticky-button {
+        margin-left: 10px; 
+    }
+}
