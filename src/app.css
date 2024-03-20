@@ -14,6 +14,14 @@ h1, h2, h3, .cabin {
     font-family: 'Cabin', sans-serif;
 }
 
+code {
+    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+    background-color: #f7f7f7;
+    border-radius: 0.2rem;
+    color: #1a202c;
+    padding: 0.1rem 0.1rem;
+}
+
 .greenShadow {
     box-shadow: 0px 14px 55px rgba(8, 110, 8, 0.45);
 }

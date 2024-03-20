@@ -120,7 +120,7 @@ const projects: Project[] = [
             'A python project for analyzing network traffic packets in Linux environments',
         content: '',
         collaborators: ['dsm1015', 'lukemcelligott'],
-        images: ['images/packetsniffer.png'],
+        images: ['images/packetsniffer.jpg'],
         icon: "fa-solid fa-wifi",
         href: "/projects/packetsniffer",
 		url: 'https://github.com/lukemcelligott/packet_sniffer',

@@ -15,7 +15,7 @@
     >
         <i class={project.icon} />
     </div> -->
-    <img src={project.images[0]} alt={project.name} class="w-full h-64 object-cover rounded-lg" />
+    <img src={project.images[0]} alt={project.name} class="w-full h-32 object-cover rounded-lg" />
     <h3 class="font-medium text-xl sm:text-2xl md:text-3xl">
         {project.name} <span class="font-light text-base align-middle">&#8226; {project.time.semester} {project.time.year}</span>
     </h3>
