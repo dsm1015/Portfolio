@@ -79,7 +79,7 @@
         </div>
     </section>
  
-    <section
+<!--     <section
         id="about"
         class="py-20 pt-10 lg:pt-16 lg:py-32 flex flex-col gap-16 sm:gap-20 md:gap-24 relative"
     >
@@ -93,5 +93,5 @@
                 A bit <span class="poppins text-green-400">about</span> me.
             </h3>
         </div>
-    </section>
+    </section> -->
 </main>

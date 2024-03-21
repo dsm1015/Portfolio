@@ -119,6 +119,8 @@ timeline.sort((a, b) => {
     }
     return 0; // Add this line to return a default value
 });
+[timeline[0], timeline[1]] = [timeline[1], timeline[0]];
 timeline.reverse();
+
 
 export {timeline};
