@@ -29,12 +29,14 @@
           <div class="grid place-items-center px-4 text-5xl md:text-6xl mx-auto duration-200">
             <i class={timeline[index].icon}></i>
           </div>
-          <div class="grid place-items-center px-4 text-5xl md:text-6xl mx-auto duration-200">
-            <i class={timeline[index+1].icon}></i>
-          </div>
-          <div class="timeline-middle">
-            <div class="timeline-circle"></div>
-          </div>
+          {#if timeline[index + 1]}
+            <div class="grid place-items-center px-4 text-5xl md:text-6xl mx-auto duration-200">
+              <i class={timeline[index+1].icon}></i>
+            </div>
+            <div class="timeline-middle">
+              <div class="timeline-circle"></div>
+            </div>
+          {/if}
         {/if}
       {/each}
     </div>
