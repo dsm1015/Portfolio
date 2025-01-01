@@ -24,12 +24,10 @@
                 I'm <span class=" text-green-400">Douglas</span> Maxwell
             </h2>
             <p class="text-base sm:text-lg md:text-xl">
-                I am a tech nerd who loves to learn.
-                Some roles I fill are <span class="text-green-400">DevOps Engineer</span>, <span class=" text-green-400">Data Scientist</span>, and <span class=" text-green-400">Full Stack Developer</span>.
-                I've worked closely with developing and deploying <span class="text-green-400">AI models</span> at scale, as well as maintaining and optimizing cloud infrastructure via <span class=" text-green-400">CI/CD</span> pipelines and Infrastructure as Code (<span class=" text-green-400">IaC</span>).
+                I am a <span class="text-green-400">software engineer</span>.
             </p>
             <p class="text-base sm:text-lg md:text-xl">
-                My software development philosophy is rooted in simplicity, scalability, and maintainability.
+                My software development philosophy is rooted in simplicity, safety, and maintainability.
             </p>
             <a href="#contact">
                 <button

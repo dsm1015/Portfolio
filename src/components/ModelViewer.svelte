@@ -39,7 +39,7 @@
     let isMouseOver = false;
     useTask((delta) => {
         if (!isMouseOver) {
-            rotation += (delta / 2);
+            rotation += (delta / 3);
         }
     });
 
