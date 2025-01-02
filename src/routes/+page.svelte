@@ -13,8 +13,7 @@
     <title>Douglas Maxwell</title>
 </svelte:head>
 
-<div class="absolute min-h-screen top-0 left-0 w-full z-[-1] opacity-60">
+<div class="absolute min-h-full top-0 left-0 w-full z-[-1] opacity-60">
     <div class="absolute inset-0" id="particles-js"></div>
 </div>
-
 <Main/>

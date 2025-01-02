@@ -28,7 +28,7 @@ const projects: Project[] = [
         icon: "fa-solid fa-list-check",
         href: "/projects/scrumbs",
 		url: 'https://github.com/dsm1015/scrumbs',
-        featured: true,
+        featured: false,
         time: {year: 2022, semester: "Fall"},
         model: false
 	},
@@ -49,7 +49,7 @@ const projects: Project[] = [
         model: false
 	},
     {
-		name: 'TrafficSim',
+		name: 'Traffic Sim',
         slug: 'trafficsim',
 		technologies: ['Java', 'Maven'],
 		description: 
@@ -60,7 +60,7 @@ const projects: Project[] = [
         icon: "fa-solid fa-diagram-project",
         href: "/projects/trafficsim",
 		url: 'https://github.com/dsm1015/TrafficSim',
-        featured: false,
+        featured: true,
         time: {year: 2023, semester: "Spring"},
         model: false
 	},

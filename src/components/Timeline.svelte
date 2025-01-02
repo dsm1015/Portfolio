@@ -5,7 +5,14 @@
 </script>
 
 <main class="flex flex-col flex-1 p-4">
-  <section id="Experience" class="design-section">
+  <section id="Header" class="py-20 lg:py-32 flex flex-col gap-24">
+    <div class="flex flex-col gap-2 text-center">
+      <h3 class="font-semibold text-3xl sm:text-4xl md:text-5xl">
+          My <span class="cabin text-green-400">Experience</span>.
+      </h3>
+    </div>
+  </section>
+  <section id="Timeline" class="design-section">
     <div class="timeline">
       <div class="grid place-items-center px-4 text-5xl md:text-6xl mx-auto duration-200">
         <i class={timeline[0].icon}></i>

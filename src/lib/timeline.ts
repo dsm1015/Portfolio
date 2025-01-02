@@ -22,7 +22,7 @@ export type Job = {
 const events: Event[] = [
     {
         title: "Graduated College",
-        description: "Excited to graduate and begin my career :).",
+        description: "I graduated SRU with a Bachelor of Science in Cybersecurity and a minor in Cognitive Science. I also had a concentration in Secure Software Development.",
         location: "",
         icon: "fa-solid fa-graduation-cap",
         image: "/images/rocky.png",
@@ -52,7 +52,7 @@ const events: Event[] = [
 const jobs: Job[] = [
     {
         title: "Software Engineer",
-        description: "<a href='https://acutecprecision.com/'>Acutec Precision Aerospace</a>",
+        description: "My current role at <a href='https://acutecprecision.com/'>Acutec Precision Aerospace</a>.",
         company: "Acutec Precision Aerospace",
         //rocket
         icon: "fa-solid fa-rocket",
@@ -63,7 +63,7 @@ const jobs: Job[] = [
     },
     {
         title: "Teaching Assistant - Python",
-        description: "I worked as a teaching assistant for the Python programming course at Slippery Rock University.",
+        description: "I prepared and taught lessons for the Python programming course at Slippery Rock University.",
         company: "Slippery Rock University",
         location: "",
         icon: "fa-brands fa-python",
@@ -73,7 +73,7 @@ const jobs: Job[] = [
     },
     {
         title: "AI Operations Engineer, Co-op",
-        description: "I worked as an AI Ops Engineer at <a href='https://www.collinsaerospace.com'>Collins Aerospace</a>.",
+        description: "I developed CI/CD pipelines and engineered load testing strategies for LLM endpoints as an AI Ops Engineer at <a href='https://www.collinsaerospace.com'>Collins Aerospace</a>.",
         company: "Collins Aerospace",
         location: "",
         icon: "fa-solid fa-code-branch",
@@ -83,7 +83,7 @@ const jobs: Job[] = [
     },
     {
         title: "Data Science Intern",
-        description: "I worked as a data science intern at <a href='https://agoc.com'>Armstrong Group</a>.",
+        description: "At <a href='https://agoc.com'>Armstrong Group</a>, I collaboratively updated, debugged, and deployed sophisticated GIS web applications that used predictive AI models for real estate.",
         company: "Armstrong Group of Companies",
         location: "",
         icon: "fa-solid fa-chart-line",
