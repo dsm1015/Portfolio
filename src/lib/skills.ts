@@ -1,4 +1,10 @@
 const mySkills = [
+    {
+        name: 'Rust', 
+        icon: '/images/tech-icons/svg/rust.svg' },
+    {
+        name: '.NET Core', 
+        icon: '/images/tech-icons/svg/net.svg' },
     { 
         name: 'Python', 
         icon: '/images/tech-icons/svg/python.svg' },

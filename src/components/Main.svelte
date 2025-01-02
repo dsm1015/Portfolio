@@ -49,12 +49,6 @@
         </div>
     </section>
 
-    <section id="skills" class="py-10 lg:py-12 flex flex-col gap-16">
-        <div class="flex justify-center">
-            <TechHex skills={mySkills} />
-        </div>
-    </section>
-
     <section id="projects" class="py-20 lg:py-32 flex flex-col gap-24">
         <div class="flex flex-col gap-2 text-center">
             <h3 class="font-semibold text-3xl sm:text-4xl md:text-5xl">
@@ -74,6 +68,17 @@
                     Check out all of my <span class="text-green-400">projects</span> &rarr;
                 </h6>
             </a>
+        </div>
+    </section>
+
+    <section id="skills" class="grid grid-cols-1 lg:grid-cols-2 gap-10 py-8 sm:py-14">
+        <div class="flex flex-col lg:justify-center text-center gap-6 md:gap-8 lg:gap-10">
+            <h3 class="font-semibold text-2xl sm:text-3xl md:text-4xl">
+                Some <span class=" text-green-400">tech</span> I've worked with:
+            </h3>
+        </div>
+        <div class="flex justify-center">
+            <TechHex skills={mySkills} />
         </div>
     </section>
  
