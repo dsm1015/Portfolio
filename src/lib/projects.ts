@@ -35,7 +35,7 @@ const projects: Project[] = [
 	{
 		name: 'Offerly',
         slug: 'offerly',
-		technologies: ['Springboot', 'Maven', 'Java', 'Bootstrap', 'MySQL', 'HTML5', 'JavaScript', 'Docker'],
+		technologies: ['Springboot', 'Maven', 'Java', 'Bootstrap', 'MySQL', 'JavaScript', 'Docker'],
 		description:
 			'Offerly was developed to be an online auction platform. Offerly provides users with a central platform for buying products secondhand',
         content: '',
@@ -83,7 +83,7 @@ const projects: Project[] = [
     {
 		name: 'Portfolio',
         slug: 'portfolio',
-		technologies: ['TypeScript', 'SvelteKit', 'TailwindCSS', 'HTML5', 'NodeJs'],
+		technologies: ['TypeScript', 'SvelteKit', 'TailwindCSS', 'NodeJs'],
 		description: 
             'My personal portfolio website for showcasing my projects and skills. Specifically, I wanted to learn <span class="text-green-400">SvelteKit</span> and <span class="text-green-400">TailwindCSS</span>.',
         content: '',
@@ -99,7 +99,7 @@ const projects: Project[] = [
     {
 		name: 'Sci-Fi Chatbot',
         slug: 'scifichatbot',
-		technologies: ['OpenAI', 'Python', 'Flask', 'JavaScript', 'HTML5'],
+		technologies: ['OpenAI', 'Python', 'Flask', 'JavaScript'],
 		description: 
             'A project for my ENGL411 Science Fiction class that allows users to chat with characters that we have read about.',
         content: '',

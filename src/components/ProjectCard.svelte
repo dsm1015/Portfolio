@@ -22,11 +22,12 @@
     <p>{@html project.description}</p>
     <div class="flex-1 flex justify-betweeen gap-4 items-end">
     </div>
-    <div class="scrolling-tech-icons">
+    <hr />
+    <div class="flex justify-center gap-1">
         {#each project.technologies as techId (techId)}
             {#each technologies as tech}
                 {#if tech.name === techId}
-                    <img src={tech.icon} alt={tech.name} class="w-10 h-10 mr-10"/>
+                    <img src={tech.icon} alt={tech.name} class="tech-icon"/>
                 {/if}
             {/each}
         {/each}

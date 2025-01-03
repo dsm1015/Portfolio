@@ -14,6 +14,11 @@ h1, h2, h3, .cabin {
     font-family: 'Cabin', sans-serif;
 }
 
+hr {
+    border: 2px solid #ffffff48;
+    border-radius: 2px;
+}
+
 code {
     font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
     background-color: #f7f7f7;
@@ -50,9 +55,13 @@ code {
     object-fit: cover;
 }
 
-.scrolling-tech-icons {
-    display: flex;
-    animation: scroll 15s linear infinite;
+.tech-icon {
+    border-radius: 3px;
+    border: dashed 3px #ffffff48;
+    height: calc(3em + 2px);
+    line-height: 3em;
+    text-align: center;
+    width: calc(3em + 2px);
 }
 
 @keyframes scroll {
