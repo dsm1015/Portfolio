@@ -14,7 +14,6 @@
         {#each blogPosts as post}
             <BlogPostCard post={post} />
         {/each}
-        <p class="text-center">I don't have any thoughts right now.</p>
     </section>
 
 </main>

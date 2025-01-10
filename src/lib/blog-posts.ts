@@ -10,13 +10,13 @@ export type BlogPost = {
 
 const blogPosts: BlogPost[] = [
     {
-        title: 'Welcome to my blog!',
-        slug: 'welcome-to-my-blog',
-        description: 'This is the first post on my blog.',
+        title: 'Building a NAS',
+        slug: 'building-a-nas',
+        description: "My experience building a home NAS without really knowing what I'm doing.",
         markdownPath: '$lib/markdown/post-1.md',
         content: '',
         featured: true,
-        postedDate: new Date('2025-01-01')
+        postedDate: new Date('2025-01-09')
     }
 ];
 
