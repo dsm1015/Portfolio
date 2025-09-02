@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>projects - packet sniffer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <h1>projects</h1>
+            <p class="subtitle">packet sniffer</p>
+        </header>
+
+        <nav>
+            <a href="index.html" class="nav-item">
+                <img src="images/home.png" alt="home" style="width: 28px; height: 28px;">
+                home
+            </a>
+            <a href="projects.html" class="nav-item">
+                <img src="images/briefcase.png" alt="briefcase" style="width: 32px; height: 32px;">
+                projects
+            </a>
+            <a href="contact.html" class="nav-item">
+                <img src="images/mail.png" alt="mail" style="width: 32px; height: 32px;">
+                contact
+            </a>
+        </nav>
+
+        <main>
+
+            <h2>Background</h2>
+            <p>
+                This project was created for a cybersecurity programming course that primarily used python.
+                A teamate and I collaborated to create a packet sniffer that could capture and analyze packets on a
+                network.
+                We used the <code>socket</code> module to capture packets and the <code>struct</code> module to parse
+                the packets.
+            </p>
+
+            <img src="images/tech-icons/svg/python.svg" alt="Python" class="project-image" />
+
+
+            <pre class="code-snippet">
+PACKET SNIFFER
+sniffing packets<span class="dots"></span>
+
+Ethernet Frame:
+Destination: ff:ff:ff:ff:ff:ff, Source: aa:bb:cc:dd:ee:ff, Protocol: 8
+    - IPv4 Packet:
+        - Protocol: 6, Source: 192.168.1.100, Target: 192.168.1.1
+
+Ethernet Frame:
+Destination: aa:bb:cc:dd:ee:ff, Source: ff:ff:ff:ff:ff:ff, Protocol: 8
+    - IPv4 Packet:
+        - Protocol: 17, Source: 192.168.1.1, Target: 192.168.1.100
+            </pre>
+        </main>
+
+        <footer>
+            <p>© 2025 Douglas Maxwell</p>
+        </footer>
+    </div>
+</body>
+
+</html>
+
+<style>
+    .dots {
+        display: inline-block;
+        position: relative;
+        width: 10px;
+    }
+
+    .dots::after {
+        content: '.';
+        animation: dots 1s steps(5, end) infinite;
+    }
+
+    @keyframes dots {
+
+        0%,
+        20% {
+            color: rgba(0, 0, 0, 0);
+            text-shadow:
+                .25em 0 0 rgba(0, 0, 0, 0),
+                .5em 0 0 rgba(0, 0, 0, 0);
+        }
+
+        40% {
+            color: #fff;
+            text-shadow:
+                .25em 0 0 rgba(0, 0, 0, 0),
+                .5em 0 0 rgba(0, 0, 0, 0);
+        }
+
+        60% {
+            text-shadow:
+                .25em 0 0 #fff,
+                .5em 0 0 rgba(0, 0, 0, 0);
+        }
+
+        80%,
+        100% {
+            text-shadow:
+                .25em 0 0 #fff,
+                .5em 0 0 #fff;
+        }
+    }
+</style>

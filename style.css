@@ -1,0 +1,154 @@
+body {
+  background-color: #061d23;
+  color: #fff;
+  font-family: 'Courier New', monospace;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 20px;
+  border: 2px solid #fff;
+}
+
+header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.icon {
+  width: 64px;
+  height: 64px;
+  image-rendering: pixelated;
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+
+.icon:hover {
+  filter: sepia(40%);
+}
+
+h1 {
+  font-size: 2.5em;
+  margin: 0;
+}
+
+.subtitle {
+  font-size: 1.2em;
+  color: #888;
+  margin-top: 5px;
+}
+.caption {
+  font-size: 0.8em;
+  color: #777;
+  margin-top: 3px;
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  margin-bottom: 30px;
+}
+
+.nav-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #fff;
+  text-decoration: none;
+  border-bottom: 1px dashed #fff;
+  padding: 0.2rem 0.4rem;
+}
+
+.nav-item:hover {
+  filter: sepia(20%);
+  background-color: #fff;
+  color: #000000;
+}
+
+.nav-item:hover img {
+  filter: brightness(0) saturate(100%) invert(17%) sepia(96%) saturate(7484%) hue-rotate(1deg) brightness(92%) contrast(109%);
+}
+
+.link {
+  color: #b58900;
+  text-decoration: none;
+  border-bottom: 1px solid #fff;
+}
+
+.link::after {
+  content: " ⮺";
+}
+
+.link:hover {
+  filter: sepia(50%);
+  background-color: #fff;
+  color: #000000;
+}
+
+code {
+  background-color: #00161c;
+  font-size: 1.5em;
+}
+
+.code-snippet {
+  background-color: #00161c;
+  padding: 6px;
+  font-size: 1.5em;
+  border: 1px dashed #555;
+}
+
+ul {
+  list-style: none;
+}
+
+ul li:before {
+  content: '-> ';
+}
+
+main {
+  font-size: 1em;
+  line-height: 1.6;
+}
+
+footer {
+  text-align: center;
+  margin-top: 40px;
+  font-size: 0.9em;
+  color: #444;
+}
+
+/* PROJECTS */
+
+.project h2 {
+  font-size: 1.5em;
+  margin-bottom: 0.2em;
+}
+
+.project p {
+  margin: 0.2em 0 1em;
+}
+
+.project a {
+  color: #cb4b16;
+  text-decoration: none;
+  border-bottom: 1px solid #fff;
+}
+
+.project a::after {
+  color: #fff;
+  content: " ->"
+}
+
+.project a:hover {
+  background: #fff;
+  color: #000;
+}
+
+.project-image {
+  max-width: 600px;
+}

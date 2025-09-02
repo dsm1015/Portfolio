@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>douglas maxwell</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" type="image/x-icon" href="images/toad.png">
+</head>
+
+<body>
+
+  <div class="container">
+    <header>
+      <img src="images/toad.png" onmouseover="this.src='images/toad-tongue.png';"
+        onmouseout="this.src='images/toad.png';" alt="Toad" class="icon">
+      <h1>douglas maxwell</h1>
+      <p class="subtitle">software engineer</p>
+      <p class="caption"><span id="yrsProfXp">1.5</span> years professional xp</p>
+      <p class="caption">3.5 years internship xp</p>
+      <p></p>
+      <div style="display: inline-flex;">
+        <img src="images/globe.png" onmouseover="this.src='images/globe-hover.png';"
+          onmouseout="this.src='images/globe.png';" alt="Globe" class="icon" style="width: 32px; height: 32px;">
+        <p class="subtitle">pennsylvania, usa</p>
+      </div>
+    </header>
+
+    <nav>
+      <a href="index.html" class="nav-item">
+        <img src="images/home.png" alt="home" style="width: 28px; height: 28px;">
+        home
+      </a>
+      <a href="projects.html" class="nav-item">
+        <img src="images/briefcase.png" alt="briefcase" style="width: 32px; height: 32px;">
+        projects
+      </a>
+      <a href="contact.html" class="nav-item">
+        <img src="images/mail.png" alt="mail" style="width: 32px; height: 32px;">
+        contact
+      </a>
+    </nav>
+
+
+    <main>
+      <div style="text-align: center;">
+        <p>I like to build clean, fast, maintainable software.</p>
+      </div>
+
+    </main>
+
+    <footer>
+      <p>© 2025 Douglas Maxwell</p>
+    </footer>
+  </div>
+
+</body>
+
+<script>
+  function getYrsProfXp() {
+    const startOfCareer = new Date('2024-05-15T00:00:00');
+    const now = new Date();
+    const yrsProfXp = (now - startOfCareer) / (1000 * 60 * 60 * 24 * 365.25);
+    document.getElementById('yrsProfXp').innerHTML = yrsProfXp.toFixed(1);
+  }
+  getYrsProfXp();
+</script>
+
+</html>
