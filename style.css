@@ -19,8 +19,6 @@ header {
 }
 
 .icon {
-  width: 64px;
-  height: 64px;
   image-rendering: pixelated;
   margin-left: 1rem;
   margin-right: 1rem;
@@ -40,6 +38,7 @@ h1 {
   color: #888;
   margin-top: 5px;
 }
+
 .caption {
   font-size: 0.8em;
   color: #777;
@@ -80,10 +79,6 @@ nav {
   border-bottom: 1px solid #fff;
 }
 
-.link::after {
-  content: " ⮺";
-}
-
 .link:hover {
   filter: sepia(50%);
   background-color: #fff;
@@ -110,6 +105,10 @@ ul li:before {
   content: '-> ';
 }
 
+hr {
+  border: 1px dashed;
+}
+
 main {
   font-size: 1em;
   line-height: 1.6;
@@ -120,6 +119,28 @@ footer {
   margin-top: 40px;
   font-size: 0.9em;
   color: #444;
+}
+
+.sprite {
+  width: 64px;
+  height: 64px;
+  background: url("images/toad-sprite-sheet.png") left center;
+  animation: play 10s steps(8) infinite;
+  image-rendering: pixelated;
+}
+
+@keyframes play {
+  0% {
+    background-position: 0px;
+  }
+
+  10% {
+    background-position: -512px;
+  }
+
+  100% {
+    background-position: -512px;
+  }
 }
 
 /* PROJECTS */
